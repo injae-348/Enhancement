@@ -56,6 +56,7 @@ public class Object1 {
 			Success();
 			System.out.println("강화 성공!");
 		}
+		
 	}
 	
 	public void Print() {
