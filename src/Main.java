@@ -10,7 +10,6 @@ public class Main {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		// BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 		Object1 obj = null;
-			
 		System.out.print("강화하시겠습니까? (Y/N)\nY = yes, N = no \ny 또는 n을 입력해주세요 : ");
 		int k = br.read();	// y또는 Y의 아스키 코드면 실행
 		if(k==89 || k==121) {
@@ -22,7 +21,14 @@ public class Main {
 			String stop;
 			while((stop = br.readLine())!=null) {
 				if(stop.equals("stop")) break;
+				if(obj.getLevel()==13) {
+					System.out.println("강화 최고 단계입니다.");
+					break;
+				}
+				
 				obj.Enhancement();
+				// obj.FluEnhancement();
+				
 				obj.Print();
 				System.out.println();
 			}
